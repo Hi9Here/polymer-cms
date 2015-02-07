@@ -27,6 +27,8 @@
     "core-ajax": "Polymer/core-ajax#~0.5.1",
     "core-menu": "Polymer/core-menu#~0.5.4",
     "paper-menu-button": "Polymer/paper-menu-button#~0.5.4",
-    "paper-dropdown": "Polymer/paper-dropdown#~0.5.4"
+    "paper-dropdown": "Polymer/paper-dropdown#~0.5.4",
+    "core-drawer-panel": "Polymer/core-drawer-panel#~0.5.4",
+    "paper-item": "Polymer/paper-item#~0.5.4"
   }
 }
