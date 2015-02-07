@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>unquote</title>
+  <title>Essential Hotels Content Manangement System</title>
 
   <meta name="viewport"
   content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
@@ -29,11 +29,29 @@
   <core-header-panel flex>
 
     <core-toolbar>
-      <paper-tabs class="fit" selected="messages" flex>
-        <paper-tab name="messages">Hotels</paper-tab>
-        <paper-tab name="favorites">Attractions</paper-tab>
-      </paper-tabs>
+      <paper-icon-button icon="menu">
+      </paper-icon-button>
+
+      <div flex>Landing Pages</div>
+git
+      <paper-menu-button>
+        <paper-icon-button icon="more-vert">
+        </paper-icon-button>
+        <paper-dropdown class="dropdown"
+                        halign="right">
+          <core-menu class="menu">
+            <paper-item>Settings</paper-item>
+            <paper-item>Help</paper-item>
+          </core-menu>
+        </paper-dropdown>
+      </paper-menu-button>
+
     </core-toolbar>
+
+    <paper-tabs class="fit" selected="messages" flex>
+      <paper-tab name="messages">Hotels</paper-tab>
+      <paper-tab name="favorites">Attractions</paper-tab>
+    </paper-tabs>
 
     <div class="container" layout vertical center>
 
