@@ -38,22 +38,22 @@
 
 <body unresolved fullbleed layout vertical>
 
-  <core-drawer-panel>
+  <core-drawer-panel id="drawerPanel">
 
-  </core-drawer-panel>
-    <core-header-panel flex>
+    <core-header-panel drawer>
+      <core-toolbar>Menu</core-toolbar>
+      <core-menu>
+        <core-item label="Landing Pages"></core-item>
+        <core-item labvel="Bookings"></core-item>
+      </core-menu>
+    </core-header-panel>
+
+    <core-header-panel main>
 
       <core-toolbar>
-        <paper-icon-button icon="menu">
 
-          <core-menu class="menu">
-
-            <paper-item>Landing Page</paper-item>
-            <paper-item>Bookings</paper-item>
-
-          </core-menu>
-
-        </paper-icon-button>
+        <core-icon-button> id="navicon" icon="menu"
+        </core-icon-button>
 
         <div flex>Landing Pages</div>
 
@@ -68,16 +68,16 @@
         </paper-menu-button>
 
         <paper-menu-button>
-        <paper-icon-button icon="more-vert">
+          <paper-icon-button icon="more-vert">
 
-          <paper-dropdown class="dropdown"
-                          halign="right">
-            <core-menu class="menu">
-              <paper-item>Settings</paper-item>
-              <paper-item>Help</paper-item>
-            </core-menu>
-          </paper-dropdown>
-        </paper-icon-button>
+            <paper-dropdown class="dropdown"
+                            halign="right">
+              <core-menu class="menu">
+                <paper-item>Settings</paper-item>
+                <paper-item>Help</paper-item>
+              </core-menu>
+            </paper-dropdown>
+          </paper-icon-button>
         </paper-menu-button>
 
       </core-toolbar>
@@ -95,6 +95,8 @@
       </div>
 
     </core-header-panel>
+  </core-drawer-panel>
+
 
   <script src="app.js"></script>
 
