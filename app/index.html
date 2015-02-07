@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Essential Hotels Content Manangement System</title>
+  <title>Essential Hotels Content Management System</title>
 
   <meta name="viewport"
   content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
@@ -22,44 +22,50 @@
   <link rel="import"
     href="../components/paper-tabs/paper-tabs.html">
   <link rel="import" href="post-list.html">
+  <link rel="import" href="../components/core-menu/core-menu.html">
+  <link rel="import" href="../components/paper-menu-button/paper-menu-button.html">
+  <link rel="import" href="../components/paper-dropdown/paper-dropdown.html">
 
 </head>
 
 <body unresolved fullbleed layout vertical>
-  <core-header-panel flex>
 
-    <core-toolbar>
-      <paper-icon-button icon="menu">
-      </paper-icon-button>
+  <core-drawer-panel>
+    <core-header-panel flex>
 
-      <div flex>Landing Pages</div>
-git
-      <paper-menu-button>
-        <paper-icon-button icon="more-vert">
+      <core-toolbar>
+        <paper-icon-button icon="menu">
         </paper-icon-button>
-        <paper-dropdown class="dropdown"
-                        halign="right">
-          <core-menu class="menu">
-            <paper-item>Settings</paper-item>
-            <paper-item>Help</paper-item>
-          </core-menu>
-        </paper-dropdown>
-      </paper-menu-button>
 
-    </core-toolbar>
+        <div flex>Landing Pages</div>
 
-    <paper-tabs class="fit" selected="messages" flex>
-      <paper-tab name="messages">Hotels</paper-tab>
-      <paper-tab name="favorites">Attractions</paper-tab>
-    </paper-tabs>
+        <paper-menu-button>
+          <paper-icon-button icon="more-vert">
+          </paper-icon-button>
+          <paper-dropdown class="dropdown"
+                          halign="right">
+            <core-menu class="menu">
+              <paper-item>Settings</paper-item>
+              <paper-item>Help</paper-item>
+            </core-menu>
+          </paper-dropdown>
+        </paper-menu-button>
 
-    <div class="container" layout vertical center>
+      </core-toolbar>
 
-      <post-list show="messages"></post-list>
+      <paper-tabs class="fit" selected="messages" flex>
+        <paper-tab name="messages">Hotels</paper-tab>
+        <paper-tab name="favorites">Attractions</paper-tab>
+      </paper-tabs>
 
-    </div>
+      <div class="container" layout vertical center>
 
-  </core-header-panel>
+        <post-list show="messages"></post-list>
+
+      </div>
+
+    </core-header-panel>
+  </core-drawer-panel>
 
   <script src="app.js"></script>
 </body>
