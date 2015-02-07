@@ -30,7 +30,3 @@ paper-tabs {
 [drawer] {
   background-color: #33CCCC;
 }
-
-core-drawer-panel:not([narrow]) #navicon {
-  display: none;
-}
