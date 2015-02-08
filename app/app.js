@@ -8,4 +8,3 @@ tabs.addEventListener('core-select', function() {
 });
 
 
-});
