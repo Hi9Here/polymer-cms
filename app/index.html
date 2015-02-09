@@ -17,27 +17,21 @@
 
 </head>
 
-<body unresolved fullbleed layout vertical>
-
-  <core-drawer-panel id="drawerPanel">
-
+<body unresolved fullbleed>
+<template is="auto-binding" id="app">
+  <core-drawer-panel>
     <core-header-panel drawer>
       <core-toolbar>Menu</core-toolbar>
-      <core-menu>
-        <core-item label="Landing Pages"><a href="#"></a></core-item>
-        <core-item label="Bookings"><a href="#"></a></core-item>
-      </core-menu>
+        <core-menu selected="{{page}}" valueattr="data-category">
+          <core-item data-category="home" label="Home"></core-item>
+          <core-item data-category="bookings" label="Bookings"></core-item>
+          <core-item data-category="other" label="Other"></core-item>
+        </core-menu>
     </core-header-panel>
-
     <core-header-panel main>
-
       <core-toolbar>
-
-        <core-icon-button core-drawer-toggle icon="menu">
-        </core-icon-button>
-
-        <div flex>Landing Pages</div>
-
+        <paper-icon-button icon="menu" core-drawer-toggle></paper-icon-button>
+        <div flex>Essential Hotels CMS</div>
         <paper-menu-button>
           <paper-icon-button icon="social:person"></paper-icon-button>
           <paper-dropdown class="dropdown" transition="">
@@ -47,7 +41,6 @@
             </core-menu>
           </paper-dropdown>
         </paper-menu-button>
-
         <paper-menu-button>
           <paper-icon-button icon="more-vert">
 
@@ -60,23 +53,40 @@
             </paper-dropdown>
           </paper-icon-button>
         </paper-menu-button>
-
       </core-toolbar>
 
-      <paper-tabs class="fit" selected="messages" flex>
-        <paper-tab name="messages">Hotels</paper-tab>
-        <paper-tab name="favorites">Attractions</paper-tab>
-        <paper-tab name="destinations">Destinations</paper-tab>
-      </paper-tabs>
+      <div class="container" fit layout vertical>
+        <core-pages selected="{{page}}" valueattr="data-category">
+          <section data-category="home">
+            <paper-tabs class="fit" selected="messages" flex>
+              <paper-tab name="messages">Hotels</paper-tab>
+              <paper-tab name="favorites">Attractions</paper-tab>
+              <paper-tab name="destinations">Destinations</paper-tab>
+            </paper-tabs>
 
-      <div class="container" horizontal layout wrap>
+            <div class="container" horizontal layout wrap>
 
-        <post-list show="messages"></post-list>
+              <post-list show="messages"></post-list>
 
-      </div>
+            </div>
+
+          </section>
+          <section data-category="bookings">
+            <h1>Bookings</h1>
+            <div>Booking stuff will go here</div>
+          </section>
+
+          <section data-category="other">
+            <h1>Other</h1>
+            <div>Other stuff will go here</div>
+          </section>
+        </core-pages>
 
     </core-header-panel>
   </core-drawer-panel>
+</template>
+
+
 
 
   <script src="app.js"></script>

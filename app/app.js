@@ -7,4 +7,8 @@ tabs.addEventListener('core-select', function() {
   list.show = tabs.selected;
 });
 
+var app = document.querySelector('#app');
+app.page = 'home';
+
+
 
